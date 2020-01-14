@@ -1,0 +1,5 @@
+/usr/bin/ld: cannot find -lopencv_nonfree
+collect2: error: ld returned 1 exit status
+make[2]: *** [apps/slam/CMakeFiles/sample_app.dir/build.make:204: bin/sample_app] Error 1
+make[1]: *** [CMakeFiles/Makefile2:255: apps/slam/CMakeFiles/sample_app.dir/all] Error 2
+make: *** [Makefile:130: all] Error 2

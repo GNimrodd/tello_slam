@@ -30,6 +30,8 @@ lsd_slam_print_status("OpenCV libs:${OpenCV_LIBRARIES}")
 
 ##==============================================================================
 # G2O
+set(G2O_ROOT "/home/nimrodd/code/g2o")
+set(G2O_DIR "/home/nimrodd/code/g2o/cmake_modules")
 find_package(G2O REQUIRED)
 set(G2O_BINARY_DIR ${G2O_ROOT}/bin)
 

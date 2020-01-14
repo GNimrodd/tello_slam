@@ -1,0 +1,83 @@
+/snap/clion/99/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/nimrodd/code/lsd_slam_noros
+-- lsd_slam_noros/CMakeLists.txt:64 >> Closure cmake modules: [34m/home/nimrodd/code/lsd_slam_noros/cmake;/home/nimrodd/code/lsd_slam_noros/cmake/modules;/home/nimrodd/code/lsd_slam_noros[m
+-- lsd_slam_noros/CMakeLists.txt:64 >> Welcome! Closure version [34m1.0.0[m
+-- Compiling for Unix
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> Setup paths for dependencies
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> 
+BEGIN NOTEs for dependencies configuration =================================
+;You can configure dependencies in a single config file (/home/nimrodd/code/lsd_slam_noros/LsdSlamDependencies_Config.cmake 
+;There are sample configuration paths in the file
+;To use this config file, change to LsdSlam_USE_MANUAL_CONFIG_FILE to TRUE
+;END NOTEs for dependencies configuration ===================================
+
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> Boost_INCLUDE_DIR:/usr/include
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> OpenCV_DIR:D:/dev/gitlab_structural_modeling/precompiled/x86/vc12/prebuilts/opencv
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> GLUT_INCLUDE_DIR:D:/deps_msvc_common/freeglut-2.8.1/include
+-- lsd_slam_noros/LsdSlamDependencies_Config.cmake:64 >> GLEW_INCLUDE_DIR:D:/deps_msvc_common/glew-1.10.0/include
+-- cmake/LsdSlamDependencies.cmake:64 >> Setup required dependencies for LsdSlam tracking library
+-- cmake/LsdSlamDependencies.cmake:64 >> Boost libs: Boost::system;Boost::thread;Boost::atomic
+-- cmake/LsdSlamDependencies.cmake:64 >> OpenCV include dirs:/usr/local/include/opencv4
+-- cmake/LsdSlamDependencies.cmake:64 >> OpenCV libs:opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dnn_superres;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_rapid;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
+CMake Warning (dev) at cmake/LsdSlamDependencies.cmake:35 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable G2O_ROOT is set to:
+
+    /home/nimrodd/code/g2o
+
+  For compatibility, CMake is ignoring the variable.
+Call Stack (most recent call first):
+  CMakeLists.txt:108 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /snap/clion/99/bin/cmake/linux/share/cmake-3.15/Modules/FindOpenGL.cmake:275 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  cmake/LsdSlamDependencies.cmake:78 (find_package)
+  CMakeLists.txt:108 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- cmake/LsdSlamDependencies.cmake:64 >> Found OpenGL ? TRUE
+-- cmake/LsdSlamDependencies.cmake:64 >> OpenGL INCLUDE: /usr/include
+-- lsd_slam_noros/CMakeLists.txt:64 >> LsdSlam_ALL_LIBRARIES:openFABMAP;Boost::system;Boost::thread;Boost::atomic;opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dnn_superres;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_rapid;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto;optimized;libg2o_core.so;debug;libg2o_core_d.so;optimized;libg2o_stuff.so;debug;libg2o_stuff_d.so;optimized;libg2o_solver_dense.so;debug;libg2o_solver_dense_d.so;optimized;libg2o_types_slam3d.so;debug;libg2o_types_slam3d_d.so;optimized;libg2o_simulator.so;debug;libg2o_simulator_d.so;libg2o_solver_csparse.so;libg2o_csparse_extension.so;libg2o_ext_csparse.so;libg2o_solver_cholmod.so;libg2o_solver_eigen.so;/usr/lib/x86_64-linux-gnu/libGL.so;/usr/lib/x86_64-linux-gnu/libGLU.so;/usr/lib/x86_64-linux-gnu/libglut.so;/usr/lib/x86_64-linux-gnu/libXi.so;/usr/lib/x86_64-linux-gnu/libGLEW.so
+-- Looking for OpenCV2.2 or greater - found
+-- OpenCV2.2 include path: /usr/include/opencv2
+-- Looking for OpenCV2.2 or greater - found
+-- OpenCV2.2 include path: /usr/include/opencv2
+-- lsd_slam/CMakeLists.txt:64 >> LsdSlam_ALL_LIBRARIES slam:openFABMAP;Boost::system;Boost::thread;Boost::atomic;opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dnn_superres;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_rapid;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto;optimized;libg2o_core.so;debug;libg2o_core_d.so;optimized;libg2o_stuff.so;debug;libg2o_stuff_d.so;optimized;libg2o_solver_dense.so;debug;libg2o_solver_dense_d.so;optimized;libg2o_types_slam3d.so;debug;libg2o_types_slam3d_d.so;optimized;libg2o_simulator.so;debug;libg2o_simulator_d.so;libg2o_solver_csparse.so;libg2o_csparse_extension.so;libg2o_ext_csparse.so;libg2o_solver_cholmod.so;libg2o_solver_eigen.so;/usr/lib/x86_64-linux-gnu/libGL.so;/usr/lib/x86_64-linux-gnu/libGLU.so;/usr/lib/x86_64-linux-gnu/libglut.so;/usr/lib/x86_64-linux-gnu/libXi.so;/usr/lib/x86_64-linux-gnu/libGLEW.so;lsd_slam
+-- lsd_slam_noros/CMakeLists.txt:64 >> LsdSlam_ALL_LIBRARIES After:openFABMAP;Boost::system;Boost::thread;Boost::atomic;opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dnn_superres;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_rapid;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto;optimized;libg2o_core.so;debug;libg2o_core_d.so;optimized;libg2o_stuff.so;debug;libg2o_stuff_d.so;optimized;libg2o_solver_dense.so;debug;libg2o_solver_dense_d.so;optimized;libg2o_types_slam3d.so;debug;libg2o_types_slam3d_d.so;optimized;libg2o_simulator.so;debug;libg2o_simulator_d.so;libg2o_solver_csparse.so;libg2o_csparse_extension.so;libg2o_ext_csparse.so;libg2o_solver_cholmod.so;libg2o_solver_eigen.so;/usr/lib/x86_64-linux-gnu/libGL.so;/usr/lib/x86_64-linux-gnu/libGLU.so;/usr/lib/x86_64-linux-gnu/libglut.so;/usr/lib/x86_64-linux-gnu/libXi.so;/usr/lib/x86_64-linux-gnu/libGLEW.so;lsd_slam
+-- slam/CMakeLists.txt:64 >> LsdSlam_ALL_LIBRARIES:openFABMAP;Boost::system;Boost::thread;Boost::atomic;opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dnn_objdetect;opencv_dnn_superres;opencv_dpm;opencv_face;opencv_freetype;opencv_fuzzy;opencv_hfs;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_quality;opencv_rapid;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto;optimized;libg2o_core.so;debug;libg2o_core_d.so;optimized;libg2o_stuff.so;debug;libg2o_stuff_d.so;optimized;libg2o_solver_dense.so;debug;libg2o_solver_dense_d.so;optimized;libg2o_types_slam3d.so;debug;libg2o_types_slam3d_d.so;optimized;libg2o_simulator.so;debug;libg2o_simulator_d.so;libg2o_solver_csparse.so;libg2o_csparse_extension.so;libg2o_ext_csparse.so;libg2o_solver_cholmod.so;libg2o_solver_eigen.so;/usr/lib/x86_64-linux-gnu/libGL.so;/usr/lib/x86_64-linux-gnu/libGLU.so;/usr/lib/x86_64-linux-gnu/libglut.so;/usr/lib/x86_64-linux-gnu/libXi.so;/usr/lib/x86_64-linux-gnu/libGLEW.so;lsd_slam
+-- Configuring done
+WARNING: Target "sample_app" requests linking to directory "/usr/local/include".  Targets may link only to libraries.  CMake is dropping the item.
+WARNING: Target "sample_app" requests linking to directory "/usr/include/suitesparse".  Targets may link only to libraries.  CMake is dropping the item.
+CMake Warning at apps/slam/CMakeLists.txt:14 (add_executable):
+  Cannot generate a safe runtime search path for target sample_app because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/home/nimrodd/code/lsd_slam_noros/lib]
+    dir 1 is [/home/nimrodd/code/g2o/lib]
+      dir 2 must precede it due to runtime library [libg2o_cli.so]
+    dir 2 is [/usr/local/lib]
+      dir 1 must precede it due to runtime library [libg2o_solver_cholmod.so]
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done
+-- Build files have been written to: /home/nimrodd/code/lsd_slam_noros

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lsd_slam_thirdparty"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lsd_slam\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\boost_system-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\boost_thread-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\thirdparty\;CMake Files\thirdparty\openFabMap\;CMake Files\apps\;CMake Files\apps\slam\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nimrodd/code/lsd_slam_noros/thirdparty"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openFABMAP">
+				<Option output="/home/nimrodd/code/lsd_slam_noros/lib/libopenFABMAP.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLsdSlam_DIR=&quot;/home/nimrodd/code/lsd_slam_noros&quot;"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DENABLE_SSE"/>
+					<Add option="-DHAVE_SOLVER_CSPARSE"/>
+					<Add option="-DHAVE_SOLVER_CHOLMOD"/>
+					<Add option="-DHAVE_SOLVER_EIGEN"/>
+					<Add option="-DHAVE_FABMAP"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/lsd_slam"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/D:/deps_msvc_common/freeglut-2.8.1/include"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/D:/deps_msvc_common/glew-1.10.0/include"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/eigen-3.2.1"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/Sophus"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/include"/>
+					<Add directory="/usr/include/opencv2"/>
+					<Add directory="/usr/local/include/opencv4"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 openFABMAP"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openFABMAP/fast">
+				<Option output="/home/nimrodd/code/lsd_slam_noros/lib/libopenFABMAP.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLsdSlam_DIR=&quot;/home/nimrodd/code/lsd_slam_noros&quot;"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DENABLE_SSE"/>
+					<Add option="-DHAVE_SOLVER_CSPARSE"/>
+					<Add option="-DHAVE_SOLVER_CHOLMOD"/>
+					<Add option="-DHAVE_SOLVER_EIGEN"/>
+					<Add option="-DHAVE_FABMAP"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/lsd_slam"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/D:/deps_msvc_common/freeglut-2.8.1/include"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/D:/deps_msvc_common/glew-1.10.0/include"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/eigen-3.2.1"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/Sophus"/>
+					<Add directory="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/include"/>
+					<Add directory="/usr/include/opencv2"/>
+					<Add directory="/usr/local/include/opencv4"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 openFABMAP/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/include/openfabmap.hpp">
+			<Option target="openFABMAP"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/src/BOWMSCTrainer.cpp">
+			<Option target="openFABMAP"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/src/ChowLiuTree.cpp">
+			<Option target="openFABMAP"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/src/FabMap.cpp">
+			<Option target="openFABMAP"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/LsdSlamDependencies_Config.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/lsd_slam/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lsd_slam\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/cmake/LsdSlamConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/cmake/LsdSlamDependencies.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/cmake/LsdSlamUtil.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/cmake/modules/FindG2O.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/BoostDetectToolset-1.72.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/Boost-1.72.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/Boost-1.72.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_headers-1.72.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_headers-1.72.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_system-1.72.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_system-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_system-1.72.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_system-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_system-1.72.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_system-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_system-1.72.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_system-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_thread-1.72.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_thread-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_thread-1.72.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_thread-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_thread-1.72.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_thread-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_thread-1.72.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_thread-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_atomic-1.72.0/boost_atomic-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_atomic-1.72.0/boost_atomic-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_atomic-1.72.0/libboost_atomic-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/boost_atomic-1.72.0/libboost_atomic-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.72.0\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\openFabMap\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/thirdparty/openFabMap/FindOpenCV.cmake">
+			<Option virtualFolder="CMake Files\thirdparty\openFabMap\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/apps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\"/>
+		</Unit>
+		<Unit filename="/home/nimrodd/code/lsd_slam_noros/apps/slam/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\slam\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

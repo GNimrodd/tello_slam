@@ -62,7 +62,7 @@ OpenCVImageStreamThread::~OpenCVImageStreamThread()
 	delete imageBuffer;
 }
 
-void OpenCVImageStreamThread::setCameraCapture(CvCapture* cap)
+void OpenCVImageStreamThread::setCameraCapture(cv::VideoCapture* cap)
 {
 	capture = cap;
 }
@@ -117,7 +117,9 @@ void OpenCVImageStreamThread::operator()()
 	{
 		TimestampedMat bufferItem;
 		bufferItem.timestamp = Timestamp::now();
-		IplImage* frame = cvQueryFrame(capture);
+//		IplImage* frame = cvQueryFrame(capture);
+        cv::Mat frame;
+        *capture >> frame;
 		if (undistorter != 0)
 		{
 			assert(undistorter->isValid());

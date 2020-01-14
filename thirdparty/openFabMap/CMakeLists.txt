@@ -69,7 +69,9 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
-TARGET_LINK_LIBRARIES(openFABMAP opencv_highgui opencv_core opencv_features2d opencv_imgproc opencv_nonfree)
+#TARGET_LINK_LIBRARIES(openFABMAP opencv_highgui opencv_core opencv_features2d opencv_imgproc opencv_nonfree)
+TARGET_LINK_LIBRARIES(openFABMAP opencv_highgui opencv_core opencv_features2d opencv_imgproc)
+
 
 
 ############ openFABMAPcli executable ##################

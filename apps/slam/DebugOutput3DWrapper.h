@@ -23,7 +23,8 @@
 #include "lsd_slam/io_wrapper/output_3d_wrapper.h"
 #include <vector>
 #include <opencv2/core/core.hpp>
-
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 namespace lsd_slam
 {
 

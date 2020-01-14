@@ -26,6 +26,8 @@
 #include "util/settings.h"
 #include "util/index_thread_reduce.h"
 #include "util/sophus_util.h"
+#include <opencv2/imgproc/types_c.h>
+
 
 
 

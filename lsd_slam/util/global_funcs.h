@@ -23,6 +23,8 @@
 #include "util/settings.h"
 #include "io_wrapper/timestamped_object.h"
 #include "util/sophus_util.h"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 
 
 
