@@ -9,41 +9,25 @@
 #include <algorithm> //
 #include "DebugOutput3DWrapper.h" //
 #include <opencv2/imgproc.hpp> //
-
+#include <opencv/highgui.h>
 #include "util/undistorter.h"
 
 
-std::vector<std::pair<double, std::string>> read_frame_list(const std::string &filepath) {
-	std::ifstream ifs(filepath);
-	if (ifs.fail()) {
-		printf("Fail to read file:%s\n", filepath.c_str());
-		exit(-1);
-	}
-
-	std::vector<std::pair<double, std::string>> files;
-	while (!ifs.eof()) {
-		double time;
-		std::string fn;
-		ifs >> time >> fn;
-		files.emplace_back(std::make_pair(time, fn));
-	}
-
-
-	for (auto i = 0; i < files.size(); i++) {
-		std::cout << "time = " << files[i].first << " frame_file = " << files[i].second << std::endl;
-	}
-
-	return files;
-}
-
-//apps_name calib_file frame_list
 using namespace lsd_slam;
 int main( int argc, char** argv )
 {
 	
-	std::string frame_list(argv[1]);
+	std::string camdevice(argv[1]);
     std::string calibFile(argv[2]);
 
+	cv::VideoCapture capture(camdevice);
+
+    if (!capture.isOpened()) {
+        printf("capture is null\n");
+        exit(1);
+    } else {
+        printf("capturing video\n");
+    }
 
     Undistorter* undistorter = Undistorter::getUndistorterForFile(calibFile.c_str());
 
@@ -71,35 +55,29 @@ int main( int argc, char** argv )
 	SlamSystem* system = new SlamSystem(w, h, K, doSlam);
 	system->setVisualization(outputWrapper);
 
-	auto files = read_frame_list(frame_list);
-
 	cv::Mat image = cv::Mat(h,w,CV_8U);
-	int runningIDX=0;
-
-	for(unsigned int i=0;i<files.size();i++)
+	cv::Mat imageDist;
+	for (auto runningIDX = 0; true; runningIDX++)
 	{
-		cv::Mat imageDist = cv::imread(files[i].second, cv::ImreadModes::IMREAD_GRAYSCALE);
-
-		if(imageDist.rows != h || imageDist.cols != w)
-		{
-			if(imageDist.rows * imageDist.cols == 0)
-				printf("failed to load image %s! skipping.\n", files[i].second.c_str());
-			else
-				printf("image %s has wrong dimensions - expecting %d x %d, found %d x %d. Skipping.\n",
-						files[i].second.c_str(),
-						w,h,imageDist.cols, imageDist.rows);
-			continue;
-		}
-		assert(imageDist.type() == CV_8U);
-
+		capture >> imageDist;
+		
 		undistorter->undistort(imageDist, image);
-		assert(image.type() == CV_8U);
 
+		auto ts = Timestamp::now().toSec();
+
+		cv::imshow("Camera_Output", imageDist); //Show image frames on created window
+        cv::imshow("Camera_Output_Undist", image);
+        char key = cvWaitKey(10); //Capture Keyboard stroke
+        if (char(key) == 27) {
+            break; //If you hit ESC key loop will break.
+        }
 		if(runningIDX == 0)
-			system->randomInit(image.data, files[i].first, runningIDX);
+			system->randomInit(image.data, ts, runningIDX);
 		else
-			system->trackFrame(image.data, runningIDX , false,files[i].first);
+			system->trackFrame(image.data, runningIDX , true, ts);
 		runningIDX++;
+
+		
 	}
 
 	system->finalize();
