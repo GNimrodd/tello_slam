@@ -1,65 +1,41 @@
-# LSD-SLAM: Large-Scale Direct Monocular SLAM
+# LSD SLAM without ROS, updated to work on ubuntu 19
 
-LSD-SLAM is a novel approach to real-time monocular SLAM. It is fully direct (i.e. does not use keypoints / features) and creates large-scale, 
-semi-dense maps in real-time on a laptop. For more information see
-[http://vision.in.tum.de/lsdslam](http://vision.in.tum.de/lsdslam)
-where you can also find the corresponding publications and Youtube videos, as well as some 
-example-input datasets, and the generated output as rosbag or .ply point cloud.
+Original project: https://github.com/aivijay/lsd_slam_noros
 
+## Installation
+1. Download all relevant libraries listed in the original project
+2. replace thirdparty/eigen-3.2.1 with a link to the eigen library you installed in (1) \[keep the name]
 
-### Related Papers
+Hit make.
+The results are three executables:
+1. sample_app: a live slam application. Call it with a device name and a path to a configuration file
+2. main_on_images: an offline slam application. Call it with a path to a file with the frame list, and a path to a configuration file
 
-* **LSD-SLAM: Large-Scale Direct Monocular SLAM**, *J. Engel, T. Schöps, D. Cremers*, ECCV '14
+The frame list file is mulitple rows in the form:
+<timestamp>	<path_to_image>
 
-* **Semi-Dense Visual Odometry for a Monocular Camera**, *J. Engel, J. Sturm, D. Cremers*, ICCV '13
+3. live_main: another live application, with a slightly different implementation. Use the same as (1)
 
-
-# How to build from source
-The lsd slam code requires c++11 features.
-Thus, it needs c++11 supported compiler to build the code from source.
-
-## Windows (requiring Visual Studio 2013)
-For windows build, please follow instructions from [Windows build](WindowsBuildInstruction.md)
-
-## Android (requiring gcc4.7+)
-TBA
-
-## Linux (requiring gcc4.7+)
-
-Building under Ubuntu
-
-1. Install G2O
-
-2. Install G2O debug versions of the lib
-
-    a. run the following inside the build folder so debug is enabled and the libs build accordingly
-	```
-	cmake -DCMAKE_BUILD_TYPE=Debug .. 
-	make
-	sudo make install
-	```
-
-3. under lsd_slam source, create a folder
-	```mkdir build```
-
-4. ```cd build```
-
-5. ```cmake ..```
-
-6. ```make -j4```
-
-This will build lsd_slam as a lib and also build the sample_app under LSD_SLAM_SOURCE/bin
-
-Run the sample with
-```
-LSD_SLAM_SOURCE/bin/sample_app <video device id>
-
-eg., to run with the video device /dev/video0
-
-LSD_SLAM_SOURE/bin/sample_app 0
-```
-
-# License
-LSD-SLAM is licensed under the GNU General Public License Version 3 (GPLv3), see http://www.gnu.org/licenses/gpl.html.
-
-For commercial purposes, the original lsd slam authors also offer a professional version under different licencing terms.
+## configuration file
+An XML file of the form:
+<?xml version="1.0"?>
+<opencv_storage>
+    <image_Width>960</image_Width>
+    <image_Height>720</image_Height>
+    <Camera_Matrix type_id="opencv-matrix">
+        <rows>3</rows>
+        <cols>3</cols>
+        <dt>d</dt>
+        <data>
+            925.8457 1.9141 465.5455 0.0 920.8599 375.7772 0.0 0.0 1.0
+        </data>
+    </Camera_Matrix>
+    <Distortion_Coefficients type_id="opencv-matrix">
+        <rows>5</rows>
+        <cols>1</cols>
+        <dt>d</dt>
+        <data>
+            0.0 0.0 0.0 0.0 0.0
+        </data>
+    </Distortion_Coefficients>
+</opencv_storage>
